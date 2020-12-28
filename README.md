@@ -1,3 +1,3 @@
 # Algoritmos
 
-Prácticas de Algoritmos (curso 2020 - 2021)
+Prácticas de Algoritmos (curso 20/21)
