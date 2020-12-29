@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 #define UMBRAL 1
 
 void ord_ins(int v[], int n)

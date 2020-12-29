@@ -1,3 +1,6 @@
+#include <stdio.h>
+#include <stdbool.h>
+
 void ord_shell(int v[], int n)
 {
     bool seguir;
@@ -20,9 +23,7 @@ void ord_shell(int v[], int n)
                     j = j - incremento;
                 }
                 else
-                {
                     seguir = false;
-                }
             }
             v[j] = tmp;
         }

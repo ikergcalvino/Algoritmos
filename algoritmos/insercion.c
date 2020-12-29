@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 void ord_ins(int v[], int n)
 {
     int i, x, j;
