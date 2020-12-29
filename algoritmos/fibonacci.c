@@ -11,6 +11,7 @@ int fib1(int x)
 int fib2(int x)
 {
   int i = 1, j = 0, k;
+
   for (k = 1; k <= x; k++)
   {
     j = i + j;
@@ -38,4 +39,19 @@ int fib3(int x)
     x = x / 2;
   }
   return j;
+}
+
+void test(int max)
+{
+  int i;
+
+  printf("|  i  | fib1 | fib2 | fib3 |\n");
+  for (i = 0; i <= max; i++)
+    printf("|%5d|%6d|%6d|%6d|\n", i, fib1(i), fib2(i), fib3(i));
+}
+
+int main()
+{
+  test(25);
+  return 0;
 }

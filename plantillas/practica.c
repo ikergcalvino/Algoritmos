@@ -51,18 +51,6 @@ void print_vector(int v[], int n)
     printf("]\n");
 }
 
-void vector_ord(int v[], int n)
-{
-    int i, cont = 0;
-    for (i = 0; i < n; i++)
-        if (v[i] <= v[i + 1])
-            cont++;
-    if (cont == n - 1)
-        printf("  -> el vector está ordenado.\n");
-    else
-        printf("  -> el vector no está ordenado.\n");
-}
-
 double microsegundos()
 {
     struct timeval t;

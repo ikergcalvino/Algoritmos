@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 struct nodo
 {
@@ -138,4 +139,53 @@ void visualizar(arbol a)
             printf(")");
         }
     }
+}
+
+void test()
+{
+    int i;
+    posicion p;
+    arbol a = creararbol();
+
+    printf("arbol vacio: ");
+    visualizar(a);
+    printf(".\n");
+    printf("altura del arbol: %i\n", altura(a));
+    printf("inserto un 3\n");
+    a = insertar(3, a);
+    printf("inserto un 1\n");
+    a = insertar(1, a);
+    printf("inserto un 2\n");
+    a = insertar(2, a);
+    printf("inserto un 5\n");
+    a = insertar(5, a);
+    printf("inserto un 4\n");
+    a = insertar(4, a);
+    printf("inserto un 5\n");
+    a = insertar(5, a);
+    printf("arbol: ");
+    visualizar(a);
+    printf(".\n");
+    printf("altura del arbol: %i\n", altura(a));
+    for (i = 1; i <= 6; i++)
+    {
+        p = buscar(i, a);
+        if (p != NULL)
+            printf("busco %d y encuentro %d repetido: %d veces\n", i,
+                   elemento(p), numerorepeticiones(p));
+        else
+            printf("busco %d y no encuentro nada\n", i);
+    }
+    printf("borro todos los nodos liberando la memoria:\n");
+    a = eliminararbol(a);
+    printf("arbol vacio: ");
+    visualizar(a);
+    printf(".\n");
+    printf("altura del arbol: %i\n", altura(a));
+}
+
+int main()
+{
+    test();
+    return 0;
 }
