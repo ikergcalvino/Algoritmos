@@ -54,12 +54,18 @@ int esarbolvacio(arbol a)
 
 posicion hijoizquierdo(arbol a)
 {
-    return a->izq;
+    if (a->izq != NULL)
+        return a->izq;
+    else
+        return NULL;
 }
 
 posicion hijoderecho(arbol a)
 {
-    return a->der;
+    if (a->der != NULL)
+        return a->der;
+    else
+        return NULL;
 }
 
 int elemento(posicion p)
